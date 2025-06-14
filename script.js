@@ -7,6 +7,9 @@ document.getElementById("sendBtn").addEventListener("click", () => {
     return;
   }
 
-  tg.sendData(JSON.stringify({ amount }));  // передаём в бот
-  document.body.innerHTML = `<h2 style="color:white">✅ Промокод формируется. Смотрите в Telegram.</h2>`;
+  tg.sendData(JSON.stringify({ amount: amount }));
+  document.body.innerHTML = `
+    <h2 style="color:white;text-align:center;padding:20px;">
+      ✅ Промокод создаётся…<br>Проверьте Telegram для завершения оплаты.
+    </h2>`;
 });
