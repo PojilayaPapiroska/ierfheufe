@@ -1,7 +1,14 @@
+:root {
+  --bg: #181a20;
+  --card-bg: #22252e;
+  --text: #f2f2f2;
+  --accent: #0088cc;
+}
+
 body {
-  background-color: #121212;
-  color: #ffffff;
-  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
@@ -11,41 +18,54 @@ body {
 }
 
 .container {
-  background-color: #1e1e2e;
-  padding: 30px;
+  background-color: var(--card-bg);
+  padding: 30px 20px;
   border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
   text-align: center;
   width: 90%;
   max-width: 400px;
 }
 
 h1 {
+  margin-bottom: 10px;
+  color: var(--accent);
+  font-size: 20px;
+}
+
+p {
+  font-size: 14px;
   margin-bottom: 20px;
-  font-size: 22px;
-  color: #00aaff;
+  color: #cfcfcf;
 }
 
 input {
-  width: 80%;
+  width: 90%;
   padding: 12px;
   border: none;
   border-radius: 8px;
   margin-bottom: 20px;
   font-size: 16px;
+  background-color: #2b2e38;
+  color: var(--text);
+}
+
+input::placeholder {
+  color: #888;
 }
 
 button {
   padding: 12px 24px;
-  background-color: #00aaff;
+  background-color: var(--accent);
   color: white;
   border: none;
   border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.2s;
+  width: 90%;
 }
 
 button:hover {
-  background-color: #0088cc;
+  background-color: #0070aa;
 }
